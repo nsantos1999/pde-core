@@ -1,11 +1,11 @@
-type Gender = "male" | "female";
+type Gender = 'male' | 'female';
 
 type PacientGenderPreference =
-  | "Não tenho preferência"
-  | "Psicólogo mulher"
-  | "Psicólogo homem";
+  | 'Não tenho preferência'
+  | 'Psicólogo mulher'
+  | 'Psicólogo homem';
 
-type FrequencyCode = "loose" | "weekly" | "biweekly";
+type FrequencyCode = 'loose' | 'weekly' | 'biweekly';
 
 interface Frequency {
   name: string;
