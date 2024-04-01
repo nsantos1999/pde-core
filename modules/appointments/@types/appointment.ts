@@ -37,6 +37,8 @@ export interface AppointmentType {
 
   rescheduled: boolean;
 
+  attendanceConfirmation: boolean;
+
   place: string;
 
   google_event_metadata: GoogleEventMetadata;
