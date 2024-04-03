@@ -1,6 +1,6 @@
-import { Gender } from "@/libs/pde-core/global/@types/gender.types";
-import { UserType } from "../../user/@types/user.type";
-import { MultiSelectOption } from "@/libs/pde-core/global/@types/multiselect-option.types";
+import { Gender } from '../../../global/@types/gender.types';
+import { MultiSelectOption } from '../../../global/@types/multiselect-option.types';
+import { UserType } from '../../user/@types/user.type';
 
 export interface DoctorType {
   doctor_id: number;

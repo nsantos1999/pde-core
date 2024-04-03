@@ -1,4 +1,5 @@
-import { Frequency, Hour } from "@/libs/pde-core/global/@types/schedule.types";
+import { Frequency } from 'src';
+import { Hour } from '../../../global/@types/schedule.types';
 
 export interface FormAppointmentDtoInterface {
   pacientId: string;
