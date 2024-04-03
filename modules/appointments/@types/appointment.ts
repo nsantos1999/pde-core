@@ -1,7 +1,6 @@
-import { Frequency } from 'src';
-import { Hour } from '../../../global/@types/schedule.types';
-import { DoctorType } from '../../doctor/@types/doctor.type';
-import { PacientType } from '../../pacient/@types/pacient.type';
+import { Frequency, Hour } from "../../../global/@types/schedule.types";
+import { DoctorType } from "../../doctor/@types/doctor.type";
+import { PacientType } from "../../pacient/@types/pacient.type";
 
 interface GoogleEventMetadata {
   google_event_id: string;

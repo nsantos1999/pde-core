@@ -1,11 +1,12 @@
-import { UserType } from '../../user/@types/user.type';
+import { TimeAvailability } from "@/libs/pde-core/global/@types/schedule.types";
+import { UserType } from "../../user/@types/user.type";
 
 type PacientGenderPreference =
-  | 'Não tenho preferência'
-  | 'Psicólogo mulher'
-  | 'Psicólogo homem';
+  | "Não tenho preferência"
+  | "Psicólogo mulher"
+  | "Psicólogo homem";
 
-type FrequencyCode = 'loose' | 'weekly' | 'biweekly';
+type FrequencyCode = "loose" | "weekly" | "biweekly";
 
 type PacientMetadata = {
   gender_preference: PacientGenderPreference;
@@ -32,7 +33,7 @@ export interface PacientType {
 
   email: string;
 
-  // time_availability: TimeAvailability;
+  time_availability: TimeAvailability;
 
   is_active: boolean;
 
