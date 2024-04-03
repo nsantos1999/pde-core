@@ -1,21 +1,6 @@
-type Gender = 'male' | 'female';
-
-type PacientGenderPreference =
-  | 'Não tenho preferência'
-  | 'Psicólogo mulher'
-  | 'Psicólogo homem';
-
-type FrequencyCode = 'loose' | 'weekly' | 'biweekly';
-
-interface Frequency {
-  name: string;
-  code: FrequencyCode;
-}
-
-interface Hour {
-  name: string;
-  code: string;
-}
+import { Frequency, Hour } from "@/libs/pde-core/global/@types/schedule.types";
+import { DoctorType } from "../../doctor/@types/doctor.type";
+import { PacientType } from "../../pacient/@types/pacient.type";
 
 interface GoogleEventMetadata {
   google_event_id: string;
@@ -38,6 +23,10 @@ export interface AppointmentType {
   rescheduled: boolean;
 
   attendanceConfirmation: boolean;
+
+  doctor_id: DoctorType;
+
+  pacient_id: PacientType;
 
   place: string;
 
