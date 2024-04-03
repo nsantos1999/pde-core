@@ -1,12 +1,9 @@
-import { TimeAvailability } from "@/libs/pde-core/global/@types/schedule.types";
-import { UserType } from "../../user/@types/user.type";
-
-type PacientGenderPreference =
-  | "Não tenho preferência"
-  | "Psicólogo mulher"
-  | "Psicólogo homem";
-
-type FrequencyCode = "loose" | "weekly" | "biweekly";
+import { PacientGenderPreference } from '../../../global/@types/gender.types';
+import {
+  FrequencyCode,
+  TimeAvailability,
+} from '../../../global/@types/schedule.types';
+import { UserType } from '../../user/@types/user.type';
 
 type PacientMetadata = {
   gender_preference: PacientGenderPreference;
