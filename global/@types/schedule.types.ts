@@ -62,3 +62,21 @@ export type HourFrame =
   | '21:00'
   | '22:00'
   | '23:00';
+
+interface SelectOption {
+  name: string;
+  code: string;
+}
+
+type TimeAvailabilityItem = {
+  is_active: boolean;
+  label: string;
+  timeframes: {
+    begin_timeframe: SelectOption;
+    end_timeframe: SelectOption;
+  }[];
+};
+
+export type TimeAvailability = {
+  [week_day in Weekday]: TimeAvailabilityItem;
+};
