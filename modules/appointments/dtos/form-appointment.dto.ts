@@ -1,5 +1,4 @@
-import { Frequency } from 'src';
-import { Hour } from '../../../global/@types/schedule.types';
+import { Frequency, Hour } from "../../../global/@types/schedule.types";
 
 export interface FormAppointmentDtoInterface {
   pacientId: string;
