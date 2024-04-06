@@ -14,14 +14,24 @@ export interface Frequency {
   code: FrequencyCode;
 }
 
-export type Weekday =
-  | 'sunday'
-  | 'monday'
-  | 'tuesday'
-  | 'wednesday'
-  | 'thursday'
-  | 'friday'
-  | 'saturday';
+export enum Weekday {
+  SUNDAY = 'sunday',
+  MONDAY = 'monday',
+  TUESDAY = 'tuesday',
+  WEDNESDAY = 'wednesday',
+  THURSDAY = 'thursday',
+  FRIDAY = 'friday',
+  SATURDAY = 'saturday',
+}
+
+// export type Weekday =
+//   | 'sunday'
+//   | 'monday'
+//   | 'tuesday'
+//   | 'wednesday'
+//   | 'thursday'
+//   | 'friday'
+//   | 'saturday';
 
 export type Month =
   | 'january'
