@@ -1,6 +1,7 @@
-import { Gender } from '../../../global/@types/gender.types';
-import { MultiSelectOption } from '../../../global/@types/multiselect-option.types';
-import { UserType } from '../../user/@types/user.type';
+import { TimeAvailability } from "@/libs/pde-core/global/@types/schedule.types";
+import { Gender } from "../../../global/@types/gender.types";
+import { MultiSelectOption } from "../../../global/@types/multiselect-option.types";
+import { UserType } from "../../user/@types/user.type";
 
 export interface DoctorType {
   doctor_id: number;
@@ -11,7 +12,7 @@ export interface DoctorType {
   phone: string;
   crp_number: string;
   approach: MultiSelectOption[];
-  time_availability: string;
+  time_availability: TimeAvailability;
   is_active: boolean;
   created_at: Date;
   updated_at: Date;
