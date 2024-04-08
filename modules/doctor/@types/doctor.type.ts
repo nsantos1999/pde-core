@@ -1,13 +1,11 @@
-import { TimeAvailability } from "@/libs/pde-core/global/@types/schedule.types";
-import { Gender } from "../../../global/@types/gender.types";
-import { MultiSelectOption } from "../../../global/@types/multiselect-option.types";
-import { UserType } from "../../user/@types/user.type";
+import { MultiSelectOption } from '../../../global/@types/multiselect-option.types';
+import { TimeAvailability } from '../../../global/@types/schedule.types';
+import { UserType } from '../../user/@types/user.type';
 
 export interface DoctorType {
   doctor_id: number;
   user: UserType;
   name: string;
-  gender: Gender;
   email: string;
   phone: string;
   crp_number: string;
