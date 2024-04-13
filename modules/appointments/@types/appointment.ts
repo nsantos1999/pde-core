@@ -1,6 +1,7 @@
-import { Frequency, Hour } from "../../../global/@types/schedule.types";
-import { DoctorType } from "../../doctor/@types/doctor.type";
-import { PacientType } from "../../pacient/@types/pacient.type";
+import { Frequency, Hour } from '../../../global/@types/schedule.types';
+import { DoctorType } from '../../doctor/@types/doctor.type';
+import { PacientType } from '../../pacient/@types/pacient.type';
+import { AppointmentChangeRequestType } from './appointment-change-request.type';
 
 interface GoogleEventMetadata {
   google_event_id: string;
@@ -31,6 +32,8 @@ export interface AppointmentType {
   place: string;
 
   google_event_metadata: GoogleEventMetadata;
+
+  changeRequests: AppointmentChangeRequestType[];
 
   created_at: Date;
 
