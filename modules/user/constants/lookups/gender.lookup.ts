@@ -1,4 +1,4 @@
-import { Gender } from "../enums/gender.enum";
+import { Gender } from '../enums/gender.enum';
 
 export type GenderLookupInterface<T extends string | number | symbol = Gender> =
   {
@@ -9,9 +9,9 @@ export type GenderLookupInterface<T extends string | number | symbol = Gender> =
 
 export const GenderLookup: GenderLookupInterface = {
   [Gender.MALE]: {
-    name: "Masculino",
+    name: 'Masculino',
   },
   [Gender.FEMALE]: {
-    name: "Feminino",
+    name: 'Feminino',
   },
 };
