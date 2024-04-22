@@ -1,11 +1,11 @@
-import { PacientGenderPreference } from '../../../global/@types/gender.types';
+import { PacientGenderPreference } from "../../../global/@types/gender.types";
 import {
   FrequencyCode,
   TimeAvailability,
-} from '../../../global/@types/schedule.types';
-import { UserType } from '../../user/@types/user.type';
+} from "../../../global/@types/schedule.types";
+import { UserType } from "../../user/@types/user.type";
 
-type PacientMetadata = {
+export type PacientMetadata = {
   gender_preference: PacientGenderPreference;
   meal_quality: string;
   sunlight_level: string;
@@ -13,10 +13,12 @@ type PacientMetadata = {
   physical_activity_level: string;
   hidration_level: string;
   emotional_control_level: string;
+  specific_reason: string;
   where_came_from?: string;
   approach_preference?: string;
   mental_health_diseases?: string[];
   appointment_frequency?: FrequencyCode;
+  profession: string;
 };
 
 export interface PacientType {

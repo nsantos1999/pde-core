@@ -1,5 +1,5 @@
-import { Frequency, Hour } from '../../../global/@types/schedule.types';
-import { AppointmentUpdateType } from '../constants/enums/appointment-update-type.enum';
+import { Frequency, Hour } from "../../../global/@types/schedule.types";
+import { AppointmentUpdateTypeEnum } from "../constants/enums/appointment-update-type.enum";
 
 export interface FormAppointmentDtoInterface {
   pacientId: string;
@@ -11,5 +11,5 @@ export interface FormAppointmentDtoInterface {
   changeRequestMessage?: string;
   frequency: Frequency;
   place: string;
-  appointmentUpdateType: AppointmentUpdateType;
+  appointmentUpdateType: AppointmentUpdateTypeEnum;
 }

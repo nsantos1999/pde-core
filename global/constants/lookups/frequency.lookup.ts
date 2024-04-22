@@ -5,6 +5,7 @@ export type FrequencyLookupInterface<
 > = {
   [key in T]: {
     name: string;
+    planName?: string;
   };
 };
 
@@ -14,8 +15,10 @@ export const FrequencyLookup: FrequencyLookupInterface = {
   },
   [FrequencyCode.WEEKLY]: {
     name: "Semanal",
+    planName: "Plano Pro",
   },
   [FrequencyCode.BIWEEKLY]: {
     name: "Quinzenal",
+    planName: "Plano Start",
   },
 };
