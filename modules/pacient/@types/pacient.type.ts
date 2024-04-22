@@ -17,6 +17,7 @@ export type PacientMetadata = {
   where_came_from?: string;
   approach_preference?: string;
   mental_health_diseases?: string[];
+  mental_health_diseases_other?: string;
   appointment_frequency?: FrequencyCode;
   profession: string;
 };
