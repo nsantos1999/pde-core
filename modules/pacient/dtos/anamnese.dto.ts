@@ -1,5 +1,5 @@
-import { TimeAvailability } from "@/libs/pde-core/global/@types/schedule.types";
-import { PacientMetadata } from "../@types/pacient.type";
+import { TimeAvailability } from '../../../global/@types/schedule.types';
+import { PacientMetadata } from '../@types/pacient.type';
 
 export interface AnamneseDtoInterface {
   name: string;
