@@ -8,6 +8,7 @@ export interface AnamneseDtoInterface {
   confirmPassword: string;
   phone: string;
   age: string;
+  gender: string;
   time_availability: TimeAvailability;
 
   metadata: PacientMetadata;
