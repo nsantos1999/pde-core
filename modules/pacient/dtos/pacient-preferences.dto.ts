@@ -1,4 +1,5 @@
-import { PacientGenderPreference } from '../../../global/@types/gender.types';
+import { FrequencyCode } from "@/libs/pde-core/global/@types/schedule.types";
+import { PacientGenderPreference } from "../../../global/@types/gender.types";
 
 export interface PacientPreferencesDtoInterface {
   metadata?: {
@@ -8,5 +9,6 @@ export interface PacientPreferencesDtoInterface {
     specific_reason: string;
     gender_preference: PacientGenderPreference;
     approach_preference: string;
+    appointment_frequency?: FrequencyCode;
   };
 }
