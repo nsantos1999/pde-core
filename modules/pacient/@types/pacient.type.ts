@@ -1,9 +1,9 @@
-import { PacientGenderPreference } from "../../../global/@types/gender.types";
+import { PacientGenderPreference } from '../../../global/@types/gender.types';
 import {
   FrequencyCode,
   TimeAvailability,
-} from "../../../global/@types/schedule.types";
-import { UserType } from "../../user/@types/user.type";
+} from '../../../global/@types/schedule.types';
+import { UserType } from '../../user/@types/user.type';
 
 export type PacientMetadata = {
   gender_preference: PacientGenderPreference;
@@ -40,6 +40,8 @@ export interface PacientType {
   metadata: PacientMetadata;
 
   age: number;
+
+  hasBeenMatched: boolean;
 
   created_at: Date;
 
