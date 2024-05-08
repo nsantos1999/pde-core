@@ -1,8 +1,5 @@
-import { ProfileEnum } from '../../auth/contants/enums/profile.enum';
+import { ProfileEnum } from "../../auth/contants/enums/profile.enum";
+import { UpdatePersonalInformationsDtoInterface } from "./update-personal-informations.dto";
 
-export interface RegisterUserDtoInterface {
-  name: string;
-  email: string;
-  phone: string;
-  profiles: ProfileEnum[];
-}
+export interface RegisterUserDtoInterface
+  extends UpdatePersonalInformationsDtoInterface {}
