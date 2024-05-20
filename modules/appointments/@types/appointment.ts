@@ -25,6 +25,8 @@ export interface AppointmentType {
 
   attendanceConfirmation: boolean;
 
+  doctorAttendanceConfirmation: boolean;
+
   doctor_id: DoctorType;
 
   pacient_id: PacientType;
