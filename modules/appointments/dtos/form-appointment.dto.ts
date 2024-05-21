@@ -4,7 +4,7 @@ import { AppointmentUpdateTypeEnum } from "../constants/enums/appointment-update
 export interface FormAppointmentDtoInterface {
   pacientId: string;
   doctorId: string;
-  scheduleDate: Date;
+  scheduleDate: Date | string;
   scheduleHour: Hour;
   title: string;
   description: string;
