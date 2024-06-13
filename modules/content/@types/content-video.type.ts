@@ -8,6 +8,7 @@ export interface ContentVideo {
   title: string;
   bannerFile: FileType;
   videoFile: FileType;
+  attachments: FileType[];
   createdAt: Date;
   updatedAt: Date;
 }

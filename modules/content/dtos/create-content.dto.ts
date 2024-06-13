@@ -2,14 +2,15 @@ export interface ContentVideoDtoInterface {
   id?: number;
   order: number;
   title: string;
-  banner?: File;
-  video?: File;
+  bannerFileId: number;
+  videoFileId: number;
+  attachmentFilesIds: number[];
 }
 
 export interface CreateContentDtoInterface {
   title: string;
   author: string;
   themeId: number;
-  banner?: File;
+  bannerFileId: number;
   videos: ContentVideoDtoInterface[];
 }
