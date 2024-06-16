@@ -1,4 +1,4 @@
-export class FileType {
+export interface FileType {
   id: number;
   fileName: string;
   key: string;
