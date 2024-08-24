@@ -78,13 +78,15 @@ interface SelectOption {
   code: string;
 }
 
-type TimeAvailabilityItem = {
+export type TimeAvailabilityItem = {
   is_active: boolean;
   label: string;
-  timeframes: {
-    begin_timeframe: SelectOption;
-    end_timeframe: SelectOption;
-  }[];
+  timeframes: Timeframe[];
+};
+
+export type Timeframe = {
+  begin_timeframe: SelectOption;
+  end_timeframe: SelectOption;
 };
 
 export type TimeAvailability = {
