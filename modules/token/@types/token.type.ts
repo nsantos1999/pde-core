@@ -9,6 +9,7 @@ export interface Token {
   type: TokenTypeEnum;
   status: TokenStatusEnum;
   expireAt: Date;
+  usedAt?: Date;
   createdAt: Date;
-  updatedAt: Date;
+  updatedAt?: Date;
 }
