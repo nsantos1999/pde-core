@@ -9,6 +9,11 @@ export enum FrequencyCode {
   BIWEEKLY = 'biweekly',
 }
 
+export enum RecurrenceFrequencyCode {
+  WEEKLY = 'weekly',
+  BIWEEKLY = 'biweekly',
+}
+
 export interface Frequency {
   name: string;
   code: FrequencyCode;
