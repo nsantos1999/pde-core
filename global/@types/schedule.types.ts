@@ -9,6 +9,12 @@ export enum FrequencyCode {
   BIWEEKLY = 'biweekly',
 }
 
+export const FrequencyWeekRepresent: Record<FrequencyCode, number> = {
+  [FrequencyCode.LOSE]: 0,
+  [FrequencyCode.WEEKLY]: 1,
+  [FrequencyCode.BIWEEKLY]: 2,
+};
+
 export enum RecurrenceFrequencyCode {
   WEEKLY = 'weekly',
   BIWEEKLY = 'biweekly',
