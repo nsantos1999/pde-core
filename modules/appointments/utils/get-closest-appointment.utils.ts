@@ -1,24 +1,24 @@
-import { AppointmentType } from '../@types/appointment';
+import { AppointmentType } from "../@types/appointment";
 
 export class GetClosestAppointmentUtils {
   static execute(
     appointments: AppointmentType[],
     targetDate: Date,
-    appointmentIdToEdit?: number,
-  ): AppointmentType {
+    appointmentIdToEdit?: number
+  ): AppointmentType | null {
     const closestAppointment = appointments
       .filter(
-        (appointment) => appointment.appointment_id !== appointmentIdToEdit,
+        (appointment) => appointment.appointment_id !== appointmentIdToEdit
       )
       .reduce<{
         appointment: AppointmentType;
         diff: number;
-      }>((closest, appointmentToCheck) => {
+      } | null>((closest, appointmentToCheck) => {
         const currentDate = new Date(appointmentToCheck.schedule_day);
 
         // Calcule a diferença em milissegundos
         const currentDiff = Math.abs(
-          currentDate.getTime() - new Date(targetDate).getTime(),
+          currentDate.getTime() - new Date(targetDate).getTime()
         );
 
         // Compare com o menor intervalo encontrado até agora
@@ -29,6 +29,6 @@ export class GetClosestAppointmentUtils {
         return closest;
       }, null);
 
-    return closestAppointment.appointment;
+    return closestAppointment?.appointment ?? null;
   }
 }
