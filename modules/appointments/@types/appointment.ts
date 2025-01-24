@@ -1,4 +1,5 @@
 import { Frequency, Hour } from '../../../global/@types/schedule.types';
+import { AppointmentRecurrenceEntity } from '../../appointment-recurrence/entities/appointment-recurrence.entity';
 import { DoctorType } from '../../doctor/@types/doctor.type';
 import { PacientType } from '../../pacient/@types/pacient.type';
 import { AppointmentChangeRequestType } from './appointment-change-request.type';
@@ -22,6 +23,8 @@ export interface AppointmentType {
   frequency: Frequency;
 
   rescheduled: boolean;
+
+  recurrence: AppointmentRecurrenceEntity;
 
   attendanceConfirmation: boolean;
 
