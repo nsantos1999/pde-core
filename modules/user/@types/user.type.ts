@@ -1,4 +1,5 @@
 import { DoctorType } from '../../doctor/@types/doctor.type';
+import { FileType } from '../../file/@types/file.type';
 import { PacientType } from '../../pacient/@types/pacient.type';
 import { Gender } from '../constants/enums/gender.enum';
 import { ProfileType } from './profile.type';
@@ -16,6 +17,7 @@ export interface UserType {
   password: string;
   is_admin: boolean;
   is_active: boolean;
+  profilePictureFile: FileType;
   created_at: Date;
   updated_at: Date;
 }
