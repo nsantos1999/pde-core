@@ -1,4 +1,11 @@
-import { addDays, addHours, addWeeks, isFuture, isSameDay } from 'date-fns';
+import {
+  addDays,
+  addHours,
+  addWeeks,
+  isBefore,
+  isFuture,
+  isSameDay,
+} from "date-fns";
 
 export class DateUtils {
   static addDays(date: Date, amount: number): Date {
@@ -12,6 +19,9 @@ export class DateUtils {
   }
   static isFuture(date: Date): boolean {
     return isFuture(new Date(date));
+  }
+  static isBefore(dateLeft: Date, dateRight: Date): boolean {
+    return isBefore(new Date(dateLeft), new Date(dateRight));
   }
   static getWeekDay(date: Date): number {
     return new Date(date).getDay();
