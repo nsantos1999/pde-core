@@ -8,6 +8,7 @@ export class AppointmentRecurrenceEntity {
   title: string;
   description?: string;
   weekDay: number;
+  startDate: Date;
   timeframe: string;
   frequency: RecurrenceFrequencyCode;
   doctor: DoctorType;
