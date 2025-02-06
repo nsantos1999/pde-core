@@ -24,6 +24,7 @@ export class AppointmentRecurrenceEntity {
     this.title = raw.title;
     this.description = raw.description;
     this.weekDay = raw.weekDay;
+    this.startDate = raw.startDate;
     this.timeframe = raw.timeframe;
     this.frequency = raw.frequency;
     this.doctor = raw.doctor;
