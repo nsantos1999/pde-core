@@ -2,6 +2,8 @@ import {
   addDays,
   addHours,
   addWeeks,
+  differenceInDays,
+  differenceInWeeks,
   isBefore,
   isFuture,
   isSameDay,
@@ -28,5 +30,11 @@ export class DateUtils {
   }
   static isSameDay(dateLeft: Date, dateRight: Date): boolean {
     return isSameDay(new Date(dateLeft), new Date(dateRight));
+  }
+  static diffInDays(dateLeft: Date, dateRight: Date): number {
+    return differenceInDays(new Date(dateLeft), new Date(dateRight));
+  }
+  static diffInWeeks(dateLeft: Date, dateRight: Date): number {
+    return differenceInWeeks(new Date(dateLeft), new Date(dateRight));
   }
 }
