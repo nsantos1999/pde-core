@@ -1,5 +1,6 @@
-import { FileType } from '../../file/@types/file.type';
+// eslint-disable-next-line import/no-cycle
 import { Content } from './content.type';
+import { FileType } from '../../file/@types/file.type';
 
 export interface ContentVideo {
   id: number;

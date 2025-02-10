@@ -1,6 +1,6 @@
-import { TimeAvailability } from '../../../global/@types/schedule.types';
-import { Gender } from '../../user/constants/enums/gender.enum';
 import { PacientMetadata } from '../@types/pacient.type';
+import { Gender } from '../../user/constants/enums/gender.enum';
+import { TimeAvailability } from '../../../global/@types/schedule.types';
 
 export interface AnamneseDtoInterface {
   name: string;

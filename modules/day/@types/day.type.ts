@@ -1,6 +1,6 @@
-import { Month, Weekday } from '../../../global/@types/schedule.types';
-import { DoctorType } from '../../doctor/@types/doctor.type';
 import { SlotType } from '../../slot/@types/slot.type';
+import { DoctorType } from '../../doctor/@types/doctor.type';
+import { Month, Weekday } from '../../../global/@types/schedule.types';
 
 export interface DayType {
   day_id: number;

@@ -1,7 +1,8 @@
-import { RecurrenceFrequencyCode } from '../../../global/@types/schedule.types';
-import { AppointmentType } from '../../appointments/@types/appointment';
 import { DoctorType } from '../../doctor/@types/doctor.type';
 import { PacientType } from '../../pacient/@types/pacient.type';
+// eslint-disable-next-line import/no-cycle
+import { AppointmentType } from '../../appointments/@types/appointment';
+import { RecurrenceFrequencyCode } from '../../../global/@types/schedule.types';
 
 export class AppointmentRecurrenceEntity {
   id: number;

@@ -1,8 +1,8 @@
-import { DoctorType } from '../../doctor/@types/doctor.type';
-import { FileType } from '../../file/@types/file.type';
-import { PacientType } from '../../pacient/@types/pacient.type';
-import { Gender } from '../constants/enums/gender.enum';
 import { ProfileType } from './profile.type';
+import { FileType } from '../../file/@types/file.type';
+import { Gender } from '../constants/enums/gender.enum';
+import type { DoctorType } from '../../doctor/@types/doctor.type';
+import type { PacientType } from '../../pacient/@types/pacient.type';
 
 export interface UserType {
   id: number;

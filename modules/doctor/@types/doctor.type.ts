@@ -1,6 +1,6 @@
-import { MultiSelectOption } from '../../../global/@types/multiselect-option.types';
-import { TimeAvailability } from '../../../global/@types/schedule.types';
 import { UserType } from '../../user/@types/user.type';
+import { TimeAvailability } from '../../../global/@types/schedule.types';
+import { MultiSelectOption } from '../../../global/@types/multiselect-option.types';
 
 export interface DoctorType {
   doctor_id: number;

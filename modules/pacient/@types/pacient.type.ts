@@ -1,6 +1,6 @@
+import { UserType } from '../../user/@types/user.type';
 import { PacientGenderPreference } from '../../../global/@types/gender.types';
 import { FrequencyCode, TimeAvailability } from '../../../global/@types/schedule.types';
-import { UserType } from '../../user/@types/user.type';
 
 export type PacientMetadata = {
   gender_preference: PacientGenderPreference;

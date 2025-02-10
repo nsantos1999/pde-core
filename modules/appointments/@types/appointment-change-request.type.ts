@@ -1,9 +1,10 @@
-import { Frequency, Hour } from '../../../global/@types/schedule.types';
+// eslint-disable-next-line import/no-cycle
+import { AppointmentType } from './appointment';
 import { DoctorType } from '../../doctor/@types/doctor.type';
 import { PacientType } from '../../pacient/@types/pacient.type';
-import { AppointmentChangeRequestStatusEnum } from '../constants/enums/appointment-change-request-status.enum';
+import { Hour, Frequency } from '../../../global/@types/schedule.types';
 import { AppointmentUpdateTypeEnum } from '../constants/enums/appointment-update-type.enum';
-import { AppointmentType } from './appointment';
+import { AppointmentChangeRequestStatusEnum } from '../constants/enums/appointment-change-request-status.enum';
 
 export interface AppointmentChangeRequestType {
   id: number;

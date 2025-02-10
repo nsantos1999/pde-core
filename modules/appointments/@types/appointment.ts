@@ -1,8 +1,9 @@
-import { Frequency, Hour } from '../../../global/@types/schedule.types';
-import { AppointmentRecurrenceEntity } from '../../appointment-recurrence/entities/appointment-recurrence.entity';
+/* eslint-disable import/no-cycle */
 import { DoctorType } from '../../doctor/@types/doctor.type';
 import { PacientType } from '../../pacient/@types/pacient.type';
+import { Hour, Frequency } from '../../../global/@types/schedule.types';
 import { AppointmentChangeRequestType } from './appointment-change-request.type';
+import { AppointmentRecurrenceEntity } from '../../appointment-recurrence/entities/appointment-recurrence.entity';
 
 interface GoogleEventMetadata {
   google_event_id: string;

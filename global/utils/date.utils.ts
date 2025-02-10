@@ -2,11 +2,11 @@ import {
   addDays,
   addHours,
   addWeeks,
-  differenceInDays,
-  differenceInWeeks,
   isBefore,
   isFuture,
   isSameDay,
+  differenceInDays,
+  differenceInWeeks,
 } from 'date-fns';
 
 export class DateUtils {

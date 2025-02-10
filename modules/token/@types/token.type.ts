@@ -1,6 +1,6 @@
 import { UserType } from '../../user/@types/user.type';
-import { TokenStatusEnum } from '../constants/enums/token-status.enum';
 import { TokenTypeEnum } from '../constants/enums/token-type.enum';
+import { TokenStatusEnum } from '../constants/enums/token-status.enum';
 
 export interface Token {
   id: number;
