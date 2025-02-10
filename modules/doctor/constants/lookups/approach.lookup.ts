@@ -1,8 +1,6 @@
-import { ApproachEnum } from "../enums/approach.enum";
+import { ApproachEnum } from '../enums/approach.enum';
 
-export type ApproachLookupInterface<
-  T extends string | number | symbol = ApproachEnum
-> = {
+export type ApproachLookupInterface<T extends string | number | symbol = ApproachEnum> = {
   [key in T]: {
     displayText: string;
   };
@@ -10,30 +8,30 @@ export type ApproachLookupInterface<
 
 export const ApproachLookup: ApproachLookupInterface = {
   [ApproachEnum.SEM_PREFERENCIA]: {
-    displayText: "Não tenho preferência / Não sei escolher",
+    displayText: 'Não tenho preferência / Não sei escolher',
   },
   [ApproachEnum.COMPORTAMENTAL_COGNITIVO]: {
-    displayText: "Terapia cognitivo comportamental (TCC)",
+    displayText: 'Terapia cognitivo comportamental (TCC)',
   },
   [ApproachEnum.HUMANISTA]: {
-    displayText: "Humanista",
+    displayText: 'Humanista',
   },
   [ApproachEnum.ANALISE_COMPORTAMENTO]: {
-    displayText: "Análise do Comportamento",
+    displayText: 'Análise do Comportamento',
   },
   [ApproachEnum.PSICANALISE]: {
-    displayText: "Psicanálise",
+    displayText: 'Psicanálise',
   },
   [ApproachEnum.GESTALT]: {
-    displayText: "Gestalt",
+    displayText: 'Gestalt',
   },
   [ApproachEnum.FENOMENOLOGICA_EXISTENCIAL]: {
-    displayText: "Fenomenológica-existencial",
+    displayText: 'Fenomenológica-existencial',
   },
   [ApproachEnum.COMPORTAMENTAL_CONTEXTUAL]: {
-    displayText: "Comportamental Contextual",
+    displayText: 'Comportamental Contextual',
   },
   [ApproachEnum.OUTRO]: {
-    displayText: "Outro",
+    displayText: 'Outro',
   },
 };

@@ -1,7 +1,4 @@
-import {
-  FrequencyCode,
-  FrequencyWeekRepresent,
-} from '../../../global/@types/schedule.types';
+import { FrequencyCode, FrequencyWeekRepresent } from '../../../global/@types/schedule.types';
 import { DateUtils } from '../../../global/utils/date.utils';
 
 interface DateToCompareWithRoundsItem {
@@ -14,17 +11,15 @@ export class CheckConflictFutureDatesUtils {
 
   static execute(
     dateToCompareA: DateToCompareWithRoundsItem,
-    dateToCompareB: DateToCompareWithRoundsItem,
+    dateToCompareB: DateToCompareWithRoundsItem
   ): boolean {
-    const getDatesWithRounds = (
-      dateToCompareItem: DateToCompareWithRoundsItem,
-    ) => {
+    const getDatesWithRounds = (dateToCompareItem: DateToCompareWithRoundsItem) => {
       const dates: Date[] = [dateToCompareItem.date];
 
       while (dates.length < this.ROUND_TO_COMPARE_DATES) {
         const increaseDate = DateUtils.addWeeks(
           dates[dates.length - 1],
-          FrequencyWeekRepresent[dateToCompareItem.frequency],
+          FrequencyWeekRepresent[dateToCompareItem.frequency]
         );
 
         dates.push(increaseDate);

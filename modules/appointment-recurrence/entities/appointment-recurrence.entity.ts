@@ -17,9 +17,7 @@ export class AppointmentRecurrenceEntity {
   createdAt: Date;
   updatedAt: Date;
 
-  constructor(
-    raw: Omit<AppointmentRecurrenceEntity, 'isAvailable' | 'hasAppointments'>,
-  ) {
+  constructor(raw: Omit<AppointmentRecurrenceEntity, 'isAvailable' | 'hasAppointments'>) {
     this.id = raw.id ?? -1; // Usando o operador nullish coalescing para um valor padrão
     this.title = raw.title;
     this.description = raw.description;

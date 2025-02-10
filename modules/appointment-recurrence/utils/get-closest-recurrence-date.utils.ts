@@ -1,8 +1,5 @@
-import {
-  FrequencyCode,
-  FrequencyWeekRepresent,
-} from "../../../global/@types/schedule.types";
-import { DateUtils } from "../../../global/utils/date.utils";
+import { FrequencyCode, FrequencyWeekRepresent } from '../../../global/@types/schedule.types';
+import { DateUtils } from '../../../global/utils/date.utils';
 
 export class GetClosestRecurrenceDateUtils {
   static execute(

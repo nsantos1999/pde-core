@@ -1,4 +1,4 @@
-import { UserType } from "../../user/@types/user.type";
+import { UserType } from '../../user/@types/user.type';
 
 export interface AuthLoginDto {
   email: string;

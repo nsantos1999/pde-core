@@ -7,7 +7,7 @@ import {
   isBefore,
   isFuture,
   isSameDay,
-} from "date-fns";
+} from 'date-fns';
 
 export class DateUtils {
   static addDays(date: Date, amount: number): Date {

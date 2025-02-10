@@ -1,7 +1,7 @@
-import { MentalHealthDiseasesEnum } from "../enums/mental-health-diseases.enum";
+import { MentalHealthDiseasesEnum } from '../enums/mental-health-diseases.enum';
 
 export type MentalHealthDiseasesLookupInterface<
-  T extends string | number | symbol = MentalHealthDiseasesEnum
+  T extends string | number | symbol = MentalHealthDiseasesEnum,
 > = {
   [key in T]: {
     name: string;
@@ -10,30 +10,30 @@ export type MentalHealthDiseasesLookupInterface<
 
 export const MentalHealthDiseasesLookup: MentalHealthDiseasesLookupInterface = {
   [MentalHealthDiseasesEnum.ANXIETY]: {
-    name: "Ansiedade",
+    name: 'Ansiedade',
   },
   [MentalHealthDiseasesEnum.PANIC]: {
-    name: "Pânico",
+    name: 'Pânico',
   },
   [MentalHealthDiseasesEnum.MELANCHOLY]: {
-    name: "Melancolia",
+    name: 'Melancolia',
   },
   [MentalHealthDiseasesEnum.SADNESS]: {
-    name: "Tristeza",
+    name: 'Tristeza',
   },
   [MentalHealthDiseasesEnum.ANGUISH]: {
-    name: "Angústia",
+    name: 'Angústia',
   },
   [MentalHealthDiseasesEnum.TRAUMAS]: {
-    name: "Traumas",
+    name: 'Traumas',
   },
   [MentalHealthDiseasesEnum.FAMILY]: {
-    name: "Familia",
+    name: 'Familia',
   },
   [MentalHealthDiseasesEnum.RELATIONSHIPS]: {
-    name: "Relacionamentos",
+    name: 'Relacionamentos',
   },
   [MentalHealthDiseasesEnum.OTHER]: {
-    name: "Outro",
+    name: 'Outro',
   },
 };
