@@ -17,7 +17,7 @@ export interface UserType {
   password: string;
   is_admin: boolean;
   is_active: boolean;
-  profilePictureFile: FileType;
+  profilePictureFile?: FileType;
   created_at: Date;
   updated_at: Date;
 }
