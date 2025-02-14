@@ -5,8 +5,9 @@ import { TokenStatusEnum } from '../constants/enums/token-status.enum';
 export interface Token {
   id: number;
   code: string;
-  user: UserType;
+  user?: UserType;
   type: TokenTypeEnum;
+  validationMetadata?: string;
   status: TokenStatusEnum;
   expireAt: Date;
   usedAt?: Date;

@@ -7,5 +7,8 @@ export enum MentalHealthDiseasesEnum {
   TRAUMAS = 'traumas',
   FAMILY = 'family',
   RELATIONSHIPS = 'relationships',
+  TDAH = 'tdah',
+  DEPRESSION = 'depression',
+  GRIEF = 'grief',
   OTHER = 'other',
 }

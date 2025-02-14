@@ -5,6 +5,7 @@ export type MentalHealthDiseasesLookupInterface<
 > = {
   [key in T]: {
     name: string;
+    showInAnamneseQuestionnaire?: boolean;
   };
 };
 
@@ -35,5 +36,17 @@ export const MentalHealthDiseasesLookup: MentalHealthDiseasesLookupInterface = {
   },
   [MentalHealthDiseasesEnum.OTHER]: {
     name: 'Outro',
+  },
+  [MentalHealthDiseasesEnum.TDAH]: {
+    name: 'TDAH',
+    showInAnamneseQuestionnaire: true,
+  },
+  [MentalHealthDiseasesEnum.DEPRESSION]: {
+    name: 'Depressão',
+    showInAnamneseQuestionnaire: true,
+  },
+  [MentalHealthDiseasesEnum.GRIEF]: {
+    name: 'Luto',
+    showInAnamneseQuestionnaire: true,
   },
 };
