@@ -4,10 +4,7 @@ interface TherapyRecordMetadata {
   name: string;
 }
 
-export const TherapyTypesLookup: Record<
-  TherapyTypesEnum,
-  TherapyRecordMetadata
-> = {
+export const TherapyTypesLookup: Record<TherapyTypesEnum, TherapyRecordMetadata> = {
   [TherapyTypesEnum.INDIVIDUAL]: {
     name: 'Individual',
   },
