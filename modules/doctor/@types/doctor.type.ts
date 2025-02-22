@@ -1,7 +1,7 @@
+import { DayType } from '../../day/@types/day.type';
 import { UserType } from '../../user/@types/user.type';
 import { TimeAvailability } from '../../../global/@types/schedule.types';
 import { MultiSelectOption } from '../../../global/@types/multiselect-option.types';
-import { DayType } from '../../day/@types/day.type';
 
 export interface DoctorType {
   doctor_id: number;
