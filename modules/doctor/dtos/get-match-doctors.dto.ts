@@ -4,6 +4,6 @@ import { MentalHealthDiseasesEnum } from '../../pacient/constants/enums/mental-h
 
 export class GetMatchDoctorsDto {
   gender: Gender | undefined;
-  mentalHealthDiseases: MentalHealthDiseasesEnum[] | undefined;
+  mentalHealthDiseases: MentalHealthDiseasesEnum | undefined;
   therapyType: TherapyTypesEnum | undefined;
 }
