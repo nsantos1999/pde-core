@@ -4,5 +4,5 @@ export interface UpdateDoctorConfigsDtoInterface {
   time_availability: TimeAvailability;
   approach: string[];
   crp_number: string;
-  descrition: string;
+  description: string;
 }
