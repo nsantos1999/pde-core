@@ -10,6 +10,7 @@ export interface DoctorType {
   email: string;
   phone: string;
   crp_number: string;
+  description?: string;
   approach: MultiSelectOption[];
   days: DayType[];
   time_availability: TimeAvailability;
