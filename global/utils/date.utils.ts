@@ -7,6 +7,8 @@ import {
   isSameDay,
   differenceInDays,
   differenceInWeeks,
+  addMonths,
+  compareAsc,
 } from 'date-fns';
 
 export class DateUtils {
@@ -18,6 +20,9 @@ export class DateUtils {
   }
   static addHours(date: Date, amount: number): Date {
     return addHours(date, amount);
+  }
+  static addMonths(date: Date, amount: number): Date {
+    return addMonths(date, amount);
   }
   static isFuture(date: Date): boolean {
     return isFuture(new Date(date));
@@ -36,5 +41,8 @@ export class DateUtils {
   }
   static diffInWeeks(dateLeft: Date, dateRight: Date): number {
     return differenceInWeeks(new Date(dateLeft), new Date(dateRight));
+  }
+  static compareAsc(dateLeft: Date, dateRight: Date): number {
+    return compareAsc(new Date(dateLeft), new Date(dateRight));
   }
 }

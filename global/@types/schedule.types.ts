@@ -35,6 +35,16 @@ export enum Weekday {
   SATURDAY = 'saturday',
 }
 
+export const WeekdayByWeekdayNumber: Record<number, Weekday> = {
+  0: Weekday.SUNDAY,
+  1: Weekday.MONDAY,
+  2: Weekday.TUESDAY,
+  3: Weekday.WEDNESDAY,
+  4: Weekday.THURSDAY,
+  5: Weekday.FRIDAY,
+  6: Weekday.SATURDAY,
+};
+
 // export type Weekday =
 //   | 'sunday'
 //   | 'monday'
