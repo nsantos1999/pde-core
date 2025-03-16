@@ -1,4 +1,4 @@
-import { HourFrame } from 'src/shared/libs/pde-core/global/@types/schedule.types';
+import { HourFrame } from '../../../../global/@types/schedule.types';
 
 export class DaysAndSlotsResponseDto {
   date: Date;
