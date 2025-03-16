@@ -1,6 +1,6 @@
 import { FrequencyCode } from '../../../../global/@types/schedule.types';
 
-export class GetAvailableDateAndSlotsDto {
+export interface GetAvailableDateAndSlotsDto {
   pacientId: number;
   doctorId: number;
   startDate: Date;
