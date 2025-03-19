@@ -3,6 +3,8 @@ import { PacientType } from '../../pacient/@types/pacient.type';
 // eslint-disable-next-line import/no-cycle
 import { AppointmentType } from '../../appointments/@types/appointment';
 import { RecurrenceFrequencyCode } from '../../../global/@types/schedule.types';
+import { DateUtils } from '../../../global/utils/date.utils';
+import { compareDesc } from 'date-fns';
 
 export class AppointmentRecurrenceEntity {
   id: number;
@@ -18,7 +20,15 @@ export class AppointmentRecurrenceEntity {
   createdAt: Date;
   updatedAt: Date;
 
-  constructor(raw: Omit<AppointmentRecurrenceEntity, 'isAvailable' | 'hasAppointments'>) {
+  constructor(
+    raw: Omit<
+      AppointmentRecurrenceEntity,
+      | 'isAvailable'
+      | 'hasAppointments'
+      | 'futureAppointments'
+      | 'lastAppointment'
+    >,
+  ) {
     this.id = raw.id ?? -1; // Usando o operador nullish coalescing para um valor padrão
     this.title = raw.title;
     this.description = raw.description;
@@ -39,5 +49,19 @@ export class AppointmentRecurrenceEntity {
 
   hasAppointments() {
     return this.appointments?.length > 0;
+  }
+
+  get futureAppointments() {
+    return this.appointments.filter((appointment) =>
+      DateUtils.isFuture(new Date(appointment.schedule_day)),
+    );
+  }
+
+  get lastAppointment() {
+    if (!this.appointments?.length) return null;
+
+    return this.appointments
+      .slice()
+      .sort((a, b) => compareDesc(a.schedule_day, b.schedule_day))[0];
   }
 }

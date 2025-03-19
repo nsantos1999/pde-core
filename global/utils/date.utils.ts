@@ -9,6 +9,8 @@ import {
   differenceInWeeks,
   addMonths,
   compareAsc,
+  nextDay,
+  Day,
 } from 'date-fns';
 
 export class DateUtils {
@@ -44,5 +46,15 @@ export class DateUtils {
   }
   static compareAsc(dateLeft: Date, dateRight: Date): number {
     return compareAsc(new Date(dateLeft), new Date(dateRight));
+  }
+  static getNextWeekdayDate(
+    targetWeekday: number,
+    date: Date = new Date(),
+  ): Date {
+    if (date.getDay() === targetWeekday) {
+      return date;
+    }
+
+    return nextDay(date, targetWeekday as Day);
   }
 }
