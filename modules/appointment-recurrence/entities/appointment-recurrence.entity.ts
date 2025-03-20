@@ -17,6 +17,7 @@ export class AppointmentRecurrenceEntity {
   doctor: DoctorType;
   pacient: PacientType;
   appointments: AppointmentType[];
+  isActive: boolean;
   createdAt: Date;
   updatedAt: Date;
 
@@ -27,6 +28,8 @@ export class AppointmentRecurrenceEntity {
       | 'hasAppointments'
       | 'futureAppointments'
       | 'lastAppointment'
+      | 'deactivate'
+      | 'activate'
     >,
   ) {
     this.id = raw.id ?? -1; // Usando o operador nullish coalescing para um valor padrão
@@ -39,16 +42,29 @@ export class AppointmentRecurrenceEntity {
     this.doctor = raw.doctor;
     this.pacient = raw.pacient;
     this.appointments = raw.appointments;
+    this.isActive = raw.isActive;
     this.createdAt = raw.createdAt;
     this.updatedAt = raw.updatedAt;
   }
 
   isAvailable() {
-    return this.doctor?.user.is_active && this.pacient?.user.is_active;
+    return (
+      this.doctor?.user.is_active &&
+      this.pacient?.user.is_active &&
+      this.isActive
+    );
   }
 
   hasAppointments() {
     return this.appointments?.length > 0;
+  }
+
+  activate() {
+    this.isActive = true;
+  }
+
+  deactivate() {
+    this.isActive = false;
   }
 
   get futureAppointments() {
