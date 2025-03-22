@@ -2,6 +2,7 @@ import {
   addDays,
   addHours,
   addWeeks,
+  subWeeks,
   isBefore,
   isFuture,
   isSameDay,
@@ -11,7 +12,7 @@ import {
   compareAsc,
   nextDay,
   Day,
-} from 'date-fns';
+} from "date-fns";
 
 export class DateUtils {
   static addDays(date: Date, amount: number): Date {
@@ -25,6 +26,9 @@ export class DateUtils {
   }
   static addMonths(date: Date, amount: number): Date {
     return addMonths(date, amount);
+  }
+  static subWeeks(date: Date, amount: number): Date {
+    return subWeeks(date, amount);
   }
   static isFuture(date: Date): boolean {
     return isFuture(new Date(date));
@@ -49,7 +53,7 @@ export class DateUtils {
   }
   static getNextWeekdayDate(
     targetWeekday: number,
-    date: Date = new Date(),
+    date: Date = new Date()
   ): Date {
     if (date.getDay() === targetWeekday) {
       return date;
