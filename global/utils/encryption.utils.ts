@@ -10,7 +10,7 @@ export class EncryptionUtils {
         key,
         padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
       },
-      new Uint8Array(buffer),
+      new Uint8Array(buffer)
     );
     return encrypted.toString('base64');
   }

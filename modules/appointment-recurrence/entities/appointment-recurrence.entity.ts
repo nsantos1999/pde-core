@@ -1,10 +1,11 @@
+import { compareDesc } from 'date-fns';
+
 import { DoctorType } from '../../doctor/@types/doctor.type';
+import { DateUtils } from '../../../global/utils/date.utils';
 import { PacientType } from '../../pacient/@types/pacient.type';
 // eslint-disable-next-line import/no-cycle
 import { AppointmentType } from '../../appointments/@types/appointment';
 import { RecurrenceFrequencyCode } from '../../../global/@types/schedule.types';
-import { DateUtils } from '../../../global/utils/date.utils';
-import { compareDesc } from 'date-fns';
 
 export class AppointmentRecurrenceEntity {
   id: number;
@@ -30,7 +31,7 @@ export class AppointmentRecurrenceEntity {
       | 'lastAppointment'
       | 'deactivate'
       | 'activate'
-    >,
+    >
   ) {
     this.id = raw.id ?? -1; // Usando o operador nullish coalescing para um valor padrão
     this.title = raw.title;
@@ -48,11 +49,7 @@ export class AppointmentRecurrenceEntity {
   }
 
   isAvailable() {
-    return (
-      this.doctor?.user.is_active &&
-      this.pacient?.user.is_active &&
-      this.isActive
-    );
+    return this.doctor?.user.is_active && this.pacient?.user.is_active && this.isActive;
   }
 
   hasAppointments() {
@@ -69,15 +66,13 @@ export class AppointmentRecurrenceEntity {
 
   get futureAppointments() {
     return this.appointments.filter((appointment) =>
-      DateUtils.isFuture(new Date(appointment.schedule_day)),
+      DateUtils.isFuture(new Date(appointment.schedule_day))
     );
   }
 
   get lastAppointment() {
     if (!this.appointments?.length) return null;
 
-    return this.appointments
-      .slice()
-      .sort((a, b) => compareDesc(a.schedule_day, b.schedule_day))[0];
+    return this.appointments.slice().sort((a, b) => compareDesc(a.schedule_day, b.schedule_day))[0];
   }
 }

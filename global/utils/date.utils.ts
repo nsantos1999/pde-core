@@ -1,18 +1,18 @@
 import {
+  Day,
   addDays,
+  nextDay,
   addHours,
   addWeeks,
   subWeeks,
   isBefore,
   isFuture,
   isSameDay,
-  differenceInDays,
-  differenceInWeeks,
   addMonths,
   compareAsc,
-  nextDay,
-  Day,
-} from "date-fns";
+  differenceInDays,
+  differenceInWeeks,
+} from 'date-fns';
 
 export class DateUtils {
   static addDays(date: Date, amount: number): Date {
@@ -51,10 +51,7 @@ export class DateUtils {
   static compareAsc(dateLeft: Date, dateRight: Date): number {
     return compareAsc(new Date(dateLeft), new Date(dateRight));
   }
-  static getNextWeekdayDate(
-    targetWeekday: number,
-    date: Date = new Date()
-  ): Date {
+  static getNextWeekdayDate(targetWeekday: number, date: Date = new Date()): Date {
     if (date.getDay() === targetWeekday) {
       return date;
     }
