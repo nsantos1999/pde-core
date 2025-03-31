@@ -10,9 +10,9 @@ import {
   isSameDay,
   addMonths,
   compareAsc,
+  startOfDay,
   differenceInDays,
   differenceInWeeks,
-  startOfDay,
 } from 'date-fns';
 
 export class DateUtils {
@@ -52,10 +52,7 @@ export class DateUtils {
   static compareAsc(dateLeft: Date, dateRight: Date): number {
     return compareAsc(new Date(dateLeft), new Date(dateRight));
   }
-  static getNextWeekdayDate(
-    targetWeekday: number,
-    date: Date = new Date(),
-  ): Date {
+  static getNextWeekdayDate(targetWeekday: number, date: Date = new Date()): Date {
     if (date.getDay() === targetWeekday) {
       return date;
     }
