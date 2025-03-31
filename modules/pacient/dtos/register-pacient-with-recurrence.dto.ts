@@ -25,9 +25,15 @@ interface RegisterPacientWithRecurrenceQuestionnaireDataDto {
   frequency: FrequencyCode;
 }
 
+interface RegisterAppointmentDataDto {
+  slotId: number;
+  frequency: FrequencyCode;
+}
+
 export interface RegisterPacientWithRecurrenceDto {
   pacientData: RegisterPacientWithRecurrencePacientDataDto;
   paymentData: RegisterPacientWithRecurrencePaymentDataDto;
   questionnaireData: RegisterPacientWithRecurrenceQuestionnaireDataDto;
+  appointmentData: RegisterAppointmentDataDto;
   validateCode: string;
 }
