@@ -1,4 +1,4 @@
-export enum PacientDoctorPreferenceEnum {
+export enum DoctorCharacteristicsEnum {
   MALE = 'male',
   FEMALE = 'female',
   CHRISTIAN = 'christian',
