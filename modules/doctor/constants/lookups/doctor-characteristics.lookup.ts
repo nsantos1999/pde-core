@@ -35,6 +35,6 @@ export const DoctorCharacteristicsLookup: Record<
   },
   [DoctorCharacteristicsEnum.NO_PREFERENCE]: {
     displayText: 'Sem preferencia',
-    showOnAdminPortal: true,
+    showOnAdminPortal: false,
   },
 };
