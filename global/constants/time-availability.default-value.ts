@@ -1,39 +1,39 @@
-import { TimeAvailability, Weekday } from "../@types/schedule.types";
+import { TimeAvailability, Weekday } from '../@types/schedule.types';
 
 export const timeAvailabilityDefaultValues: TimeAvailability = {
   [Weekday.SUNDAY]: {
     is_active: false,
-    label: "Domingo",
+    label: 'Domingo',
     timeframes: [],
   },
   [Weekday.MONDAY]: {
     is_active: false,
-    label: "Segunda",
+    label: 'Segunda',
     timeframes: [],
   },
   [Weekday.TUESDAY]: {
     is_active: false,
-    label: "Terça",
+    label: 'Terça',
     timeframes: [],
   },
   [Weekday.WEDNESDAY]: {
     is_active: false,
-    label: "Quarta",
+    label: 'Quarta',
     timeframes: [],
   },
   [Weekday.THURSDAY]: {
     is_active: false,
-    label: "Quinta",
+    label: 'Quinta',
     timeframes: [],
   },
   [Weekday.FRIDAY]: {
     is_active: false,
-    label: "Sexta",
+    label: 'Sexta',
     timeframes: [],
   },
   [Weekday.SATURDAY]: {
     is_active: false,
-    label: "Sabado",
+    label: 'Sabado',
     timeframes: [],
   },
 };
