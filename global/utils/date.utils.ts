@@ -10,6 +10,7 @@ import {
   isSameDay,
   addMonths,
   compareAsc,
+  startOfDay,
   differenceInDays,
   differenceInWeeks,
 } from 'date-fns';
@@ -57,5 +58,8 @@ export class DateUtils {
     }
 
     return nextDay(date, targetWeekday as Day);
+  }
+  static startOfDay(date: Date): Date {
+    return startOfDay(date);
   }
 }

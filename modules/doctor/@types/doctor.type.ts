@@ -2,6 +2,7 @@ import { DayType } from '../../day/@types/day.type';
 import { UserType } from '../../user/@types/user.type';
 import { TimeAvailability } from '../../../global/@types/schedule.types';
 import { MultiSelectOption } from '../../../global/@types/multiselect-option.types';
+import { DoctorCharacteristicType } from './doctor-characteristic.type';
 
 export interface DoctorType {
   doctor_id: number;
@@ -14,6 +15,7 @@ export interface DoctorType {
   approach: MultiSelectOption[];
   days: DayType[];
   time_availability: TimeAvailability;
+  characteristics: DoctorCharacteristicType[];
   is_active: boolean;
   created_at: Date;
   updated_at: Date;
