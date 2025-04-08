@@ -1,8 +1,11 @@
 import { FrequencyCode } from '../../../global/@types/schedule.types';
 import { TherapyTypesEnum } from '../../appointments/constants/enums/therapy-types.enum';
+import { DoctorCharacteristicsEnum } from '../../doctor/constants/enums/doctor-characteristics.enum';
+import { DoctorCommunicationStyleEnum } from '../../doctor/constants/enums/doctor-communication-style.enum';
 import { BillingTypeEnum } from '../../payment/constants/enums/billing-type.enum';
 import { Gender } from '../../user/constants/enums/gender.enum';
 import { MentalHealthDiseasesEnum } from '../constants/enums/mental-health-diseases.enum';
+import { PacientHealthStatusEnum } from '../constants/enums/pacient-health-status.enum';
 
 interface RegisterPacientWithRecurrencePacientDataDto {
   name: string;
@@ -11,18 +14,24 @@ interface RegisterPacientWithRecurrencePacientDataDto {
   password: string;
   gender: Gender;
   age: number;
-  document: string;
+  document?: string;
 }
 
 interface RegisterPacientWithRecurrencePaymentDataDto {
   type: BillingTypeEnum;
   creditCardToken?: string;
+  creditCardExtraData?: {
+    postalCode: string;
+    addressNumber: string;
+  };
 }
 
 interface RegisterPacientWithRecurrenceQuestionnaireDataDto {
   therapyType: TherapyTypesEnum;
   mentalHealthDiseases: MentalHealthDiseasesEnum;
-  frequency: FrequencyCode;
+  doctorCharacteristics: DoctorCharacteristicsEnum[];
+  doctorCommunicationStyle: DoctorCommunicationStyleEnum;
+  healthStatus: PacientHealthStatusEnum;
 }
 
 interface RegisterAppointmentDataDto {

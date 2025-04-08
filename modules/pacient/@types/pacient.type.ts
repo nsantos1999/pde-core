@@ -1,9 +1,20 @@
 import { UserType } from '../../user/@types/user.type';
 import { PacientGenderPreference } from '../../../global/@types/gender.types';
-import { FrequencyCode, TimeAvailability } from '../../../global/@types/schedule.types';
+import {
+  FrequencyCode,
+  TimeAvailability,
+} from '../../../global/@types/schedule.types';
+import { DoctorCharacteristicsEnum } from '../../doctor/constants/enums/doctor-characteristics.enum';
+import { DoctorCommunicationStyleEnum } from '../../doctor/constants/enums/doctor-communication-style.enum';
+import { PacientHealthStatusEnum } from '../constants/enums/pacient-health-status.enum';
+import { TherapyTypesEnum } from '../../appointments/constants/enums/therapy-types.enum';
 
 export type PacientMetadata = {
   gender_preference: PacientGenderPreference;
+  doctor_characteristics?: DoctorCharacteristicsEnum[];
+  doctor_communication_style?: DoctorCommunicationStyleEnum;
+  health_status?: PacientHealthStatusEnum;
+  therapy_type?: TherapyTypesEnum;
   meal_quality: string;
   sunlight_level: string;
   sleep_quality: string;
