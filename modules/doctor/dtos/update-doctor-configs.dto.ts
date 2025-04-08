@@ -1,4 +1,5 @@
 import { TimeAvailability } from '../../../global/@types/schedule.types';
+import { TherapyTypesEnum } from '../../appointments/constants/enums/therapy-types.enum';
 import { DoctorCharacteristicsEnum } from '../constants/enums/doctor-characteristics.enum';
 
 export interface UpdateDoctorConfigsDtoInterface {
@@ -7,4 +8,5 @@ export interface UpdateDoctorConfigsDtoInterface {
   crp_number: string;
   description: string;
   characteristics: DoctorCharacteristicsEnum[];
+  therapyTypes: TherapyTypesEnum[];
 }
