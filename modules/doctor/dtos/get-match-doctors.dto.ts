@@ -1,9 +1,9 @@
-import { Gender } from '../../user/constants/enums/gender.enum';
 import { TherapyTypesEnum } from '../../appointments/constants/enums/therapy-types.enum';
-import { MentalHealthDiseasesEnum } from '../../pacient/constants/enums/mental-health-diseases.enum';
+import { DoctorCharacteristicType } from '../@types/doctor-characteristic.type';
+import { ApproachEnum } from '../constants/enums/approach.enum';
 
 export class GetMatchDoctorsDto {
-  gender: Gender | undefined;
-  mentalHealthDiseases: MentalHealthDiseasesEnum | undefined;
-  therapyType: TherapyTypesEnum | undefined;
+  therapyType: TherapyTypesEnum;
+  doctorCharacteristics: DoctorCharacteristicType[];
+  approachPreference: ApproachEnum;
 }
