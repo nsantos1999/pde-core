@@ -1,7 +1,7 @@
-import { SubscriptionStatusEnum } from '../constants/enums/subscription-status.enum';
-import { DateUtils } from 'src/shared/libs/pde-core/global/utils/date.utils';
-import { SubscriptionCycleEnum } from '../constants/enums/subscription-cycle.enum';
-import { UserType } from '../../user/@types/user.type';
+import { SubscriptionStatusEnum } from "../constants/enums/subscription-status.enum";
+import { SubscriptionCycleEnum } from "../constants/enums/subscription-cycle.enum";
+import { UserType } from "../../user/@types/user.type";
+import { DateUtils } from "../../../global/utils/date.utils";
 
 export class SubscriptionEntity {
   readonly id: number;
@@ -16,7 +16,7 @@ export class SubscriptionEntity {
   readonly updatedAt: Date;
 
   constructor(
-    subscriptionEntity: Omit<SubscriptionEntity, 'isLate' | 'setUser'>,
+    subscriptionEntity: Omit<SubscriptionEntity, "isLate" | "setUser">
   ) {
     this.id = subscriptionEntity.id;
     this.externalId = subscriptionEntity.externalId;
