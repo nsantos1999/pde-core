@@ -13,6 +13,7 @@ import {
   startOfDay,
   differenceInDays,
   differenceInWeeks,
+  differenceInSeconds,
 } from 'date-fns';
 
 export class DateUtils {
@@ -43,6 +44,9 @@ export class DateUtils {
   static isSameDay(dateLeft: Date, dateRight: Date): boolean {
     return isSameDay(new Date(dateLeft), new Date(dateRight));
   }
+  static diffInSeconds(dateLeft: Date, dateRight: Date): number {
+    return differenceInSeconds(new Date(dateLeft), new Date(dateRight));
+  }
   static diffInDays(dateLeft: Date, dateRight: Date): number {
     return differenceInDays(new Date(dateLeft), new Date(dateRight));
   }
@@ -52,7 +56,10 @@ export class DateUtils {
   static compareAsc(dateLeft: Date, dateRight: Date): number {
     return compareAsc(new Date(dateLeft), new Date(dateRight));
   }
-  static getNextWeekdayDate(targetWeekday: number, date: Date = new Date()): Date {
+  static getNextWeekdayDate(
+    targetWeekday: number,
+    date: Date = new Date(),
+  ): Date {
     if (date.getDay() === targetWeekday) {
       return date;
     }

@@ -27,6 +27,7 @@ export type PacientMetadata = {
   mental_health_diseases?: string[];
   mental_health_diseases_other?: string;
   appointment_frequency?: FrequencyCode;
+  selected_start_slot_id?: number;
   profession: string;
 };
 
