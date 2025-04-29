@@ -1,11 +1,14 @@
 import { DateUtils } from '../../../global/utils/date.utils';
-import { FrequencyCode, FrequencyWeekRepresent } from '../../../global/@types/schedule.types';
+import {
+  FrequencyCode,
+  FrequencyWeekRepresent,
+} from '../../../global/@types/schedule.types';
 
 export class GetClosestRecurrenceDateUtils {
   static execute(
     startDate: Date,
     frequency: FrequencyCode,
-    referenceDate: Date = new Date()
+    referenceDate: Date = new Date(),
   ): Date {
     let recurrenceDate = new Date(startDate);
 
@@ -14,7 +17,7 @@ export class GetClosestRecurrenceDateUtils {
 
     // Itera até encontrar a data mais próxima e menor ou igual à data de referência
     let closestDate = recurrenceDate;
-    while (DateUtils.diffInWeeks(closestDate, referenceDate) > step) {
+    while (DateUtils.diffInWeeks(closestDate, referenceDate) <= step) {
       recurrenceDate = DateUtils.addWeeks(closestDate, step);
       if (
         DateUtils.isBefore(recurrenceDate, referenceDate) ||
