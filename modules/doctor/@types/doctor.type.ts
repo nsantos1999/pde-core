@@ -18,6 +18,8 @@ export interface DoctorType {
   time_availability: TimeAvailability;
   characteristics: DoctorCharacteristicType[];
   therapyTypes: DoctorTherapyType[];
+  internalRating?: number;
+  externalRating?: number;
   is_active: boolean;
   created_at: Date;
   updated_at: Date;
