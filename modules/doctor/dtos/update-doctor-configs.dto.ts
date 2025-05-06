@@ -9,4 +9,5 @@ export interface UpdateDoctorConfigsDtoInterface {
   description: string;
   characteristics: DoctorCharacteristicsEnum[];
   therapyTypes: TherapyTypesEnum[];
+  internalRating?: number;
 }
