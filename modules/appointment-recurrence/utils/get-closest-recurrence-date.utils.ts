@@ -1,14 +1,11 @@
 import { DateUtils } from '../../../global/utils/date.utils';
-import {
-  FrequencyCode,
-  FrequencyWeekRepresent,
-} from '../../../global/@types/schedule.types';
+import { FrequencyCode, FrequencyWeekRepresent } from '../../../global/@types/schedule.types';
 
 export class GetClosestRecurrenceDateUtils {
   static execute(
     startDate: Date,
     frequency: FrequencyCode,
-    referenceDate: Date = new Date(),
+    referenceDate: Date = new Date()
   ): Date {
     let recurrenceDate = new Date(startDate);
 

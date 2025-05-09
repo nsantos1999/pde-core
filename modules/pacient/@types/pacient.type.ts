@@ -1,13 +1,10 @@
 import { UserType } from '../../user/@types/user.type';
 import { PacientGenderPreference } from '../../../global/@types/gender.types';
-import {
-  FrequencyCode,
-  TimeAvailability,
-} from '../../../global/@types/schedule.types';
-import { DoctorCharacteristicsEnum } from '../../doctor/constants/enums/doctor-characteristics.enum';
-import { DoctorCommunicationStyleEnum } from '../../doctor/constants/enums/doctor-communication-style.enum';
+import { FrequencyCode, TimeAvailability } from '../../../global/@types/schedule.types';
 import { PacientHealthStatusEnum } from '../constants/enums/pacient-health-status.enum';
 import { TherapyTypesEnum } from '../../appointments/constants/enums/therapy-types.enum';
+import { DoctorCharacteristicsEnum } from '../../doctor/constants/enums/doctor-characteristics.enum';
+import { DoctorCommunicationStyleEnum } from '../../doctor/constants/enums/doctor-communication-style.enum';
 
 export type PacientMetadata = {
   gender_preference: PacientGenderPreference;

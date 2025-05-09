@@ -1,4 +1,4 @@
-import { TimeAvailability, Weekday } from '../@types/schedule.types';
+import { Weekday, TimeAvailability } from '../@types/schedule.types';
 
 export const timeAvailabilityDefaultValues: TimeAvailability = {
   [Weekday.SUNDAY]: {

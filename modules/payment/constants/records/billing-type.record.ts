@@ -4,10 +4,7 @@ interface BillingTypeRecordProps {
   title: string;
 }
 
-export const BillingTypeRecord: Record<
-  BillingTypeEnum,
-  BillingTypeRecordProps
-> = {
+export const BillingTypeRecord: Record<BillingTypeEnum, BillingTypeRecordProps> = {
   [BillingTypeEnum.BANK_SLIP]: {
     title: 'Boleto',
   },

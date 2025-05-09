@@ -1,5 +1,5 @@
-import { RecurrenceFrequencyCode } from '../../../global/@types/schedule.types';
 import { BillingTypeEnum } from '../constants/enums/billing-type.enum';
+import { RecurrenceFrequencyCode } from '../../../global/@types/schedule.types';
 
 export interface CreditCardPaymentDto {
   creditCardToken: string;

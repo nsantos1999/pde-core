@@ -1,11 +1,11 @@
+import { Gender } from '../../user/constants/enums/gender.enum';
 import { FrequencyCode } from '../../../global/@types/schedule.types';
+import { BillingTypeEnum } from '../../payment/constants/enums/billing-type.enum';
+import { PacientHealthStatusEnum } from '../constants/enums/pacient-health-status.enum';
 import { TherapyTypesEnum } from '../../appointments/constants/enums/therapy-types.enum';
+import { MentalHealthDiseasesEnum } from '../constants/enums/mental-health-diseases.enum';
 import { DoctorCharacteristicsEnum } from '../../doctor/constants/enums/doctor-characteristics.enum';
 import { DoctorCommunicationStyleEnum } from '../../doctor/constants/enums/doctor-communication-style.enum';
-import { BillingTypeEnum } from '../../payment/constants/enums/billing-type.enum';
-import { Gender } from '../../user/constants/enums/gender.enum';
-import { MentalHealthDiseasesEnum } from '../constants/enums/mental-health-diseases.enum';
-import { PacientHealthStatusEnum } from '../constants/enums/pacient-health-status.enum';
 
 interface RegisterPacientWithRecurrencePacientDataDto {
   name: string;

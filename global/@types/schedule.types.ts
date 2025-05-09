@@ -20,10 +20,7 @@ export enum RecurrenceFrequencyCode {
   BIWEEKLY = 'biweekly',
 }
 
-export const RecurrenceFrequencyLookup: Record<
-  RecurrenceFrequencyCode,
-  { displayText: string }
-> = {
+export const RecurrenceFrequencyLookup: Record<RecurrenceFrequencyCode, { displayText: string }> = {
   [RecurrenceFrequencyCode.WEEKLY]: {
     displayText: 'Semanal',
   },

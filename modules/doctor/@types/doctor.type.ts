@@ -1,9 +1,9 @@
 import { DayType } from '../../day/@types/day.type';
 import { UserType } from '../../user/@types/user.type';
+import { DoctorTherapyType } from './doctor-therapy-type.type';
+import { DoctorCharacteristicType } from './doctor-characteristic.type';
 import { TimeAvailability } from '../../../global/@types/schedule.types';
 import { MultiSelectOption } from '../../../global/@types/multiselect-option.types';
-import { DoctorCharacteristicType } from './doctor-characteristic.type';
-import { DoctorTherapyType } from './doctor-therapy-type.type';
 
 export interface DoctorType {
   doctor_id: number;

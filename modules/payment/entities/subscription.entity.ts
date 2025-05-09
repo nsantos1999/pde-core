@@ -1,7 +1,7 @@
-import { SubscriptionStatusEnum } from "../constants/enums/subscription-status.enum";
-import { SubscriptionCycleEnum } from "../constants/enums/subscription-cycle.enum";
-import { UserType } from "../../user/@types/user.type";
-import { DateUtils } from "../../../global/utils/date.utils";
+import { UserType } from '../../user/@types/user.type';
+import { DateUtils } from '../../../global/utils/date.utils';
+import { SubscriptionCycleEnum } from '../constants/enums/subscription-cycle.enum';
+import { SubscriptionStatusEnum } from '../constants/enums/subscription-status.enum';
 
 export class SubscriptionEntity {
   readonly id: number;
@@ -15,9 +15,7 @@ export class SubscriptionEntity {
   readonly createdAt: Date;
   readonly updatedAt: Date;
 
-  constructor(
-    subscriptionEntity: Omit<SubscriptionEntity, "isLate" | "setUser">
-  ) {
+  constructor(subscriptionEntity: Omit<SubscriptionEntity, 'isLate' | 'setUser'>) {
     this.id = subscriptionEntity.id;
     this.externalId = subscriptionEntity.externalId;
     this.value = subscriptionEntity.value;
