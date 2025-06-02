@@ -28,7 +28,7 @@ interface RegisterPacientWithRecurrencePaymentDataDto {
 
 interface RegisterPacientWithRecurrenceQuestionnaireDataDto {
   therapyType: TherapyTypesEnum;
-  mentalHealthDiseases: MentalHealthDiseasesEnum;
+  mentalHealthDiseases: MentalHealthDiseasesEnum[];
   doctorCharacteristics: DoctorCharacteristicsEnum[];
   doctorCommunicationStyle: DoctorCommunicationStyleEnum;
   healthStatus: PacientHealthStatusEnum;
