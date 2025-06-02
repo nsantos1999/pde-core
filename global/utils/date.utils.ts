@@ -1,5 +1,6 @@
 import {
   Day,
+  format,
   addDays,
   nextDay,
   addHours,
@@ -65,5 +66,9 @@ export class DateUtils {
   }
   static startOfDay(date: Date): Date {
     return startOfDay(date);
+  }
+
+  static format(date: Date, formatStr: string): string {
+    return format(date, formatStr);
   }
 }
