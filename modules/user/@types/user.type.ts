@@ -18,6 +18,7 @@ export interface UserType {
   is_admin: boolean;
   is_active: boolean;
   profilePictureFile?: FileType;
+  paymentCustomerId?: string;
   created_at: Date;
   updated_at: Date;
 }
