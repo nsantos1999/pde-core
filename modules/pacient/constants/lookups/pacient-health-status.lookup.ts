@@ -9,10 +9,10 @@ export const PacientHealthStatusLookup: Record<
   PacientHealthStatusLookupProps
 > = {
   [PacientHealthStatusEnum.GOOD]: {
-    displayText: 'Boa',
+    displayText: 'Muito boa',
   },
   [PacientHealthStatusEnum.OK]: {
-    displayText: 'Ok',
+    displayText: 'Boa',
   },
   [PacientHealthStatusEnum.BAD]: {
     displayText: 'Ruim',
