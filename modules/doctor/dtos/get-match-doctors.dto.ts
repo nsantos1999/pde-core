@@ -6,7 +6,7 @@ import { DoctorCharacteristicsEnum } from '../constants/enums/doctor-characteris
 export class GetMatchDoctorsDto {
   therapyType: TherapyTypesEnum | undefined;
   doctorCharacteristics: DoctorCharacteristicsEnum[] | undefined;
-  approachPreference: ApproachEnum | undefined;
+  approachPreferences: ApproachEnum[] | undefined;
   frequency: RecurrenceFrequencyCode | undefined;
   validateCode: string | undefined;
 }
