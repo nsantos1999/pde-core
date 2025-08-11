@@ -13,7 +13,6 @@ interface RegisterPacientWithRecurrencePacientDataDto {
   phone: string;
   password: string;
   gender: Gender;
-  age: number;
   document?: string;
 }
 
