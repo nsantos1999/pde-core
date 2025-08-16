@@ -32,6 +32,8 @@ interface RegisterPacientWithRecurrenceQuestionnaireDataDto {
   doctorCharacteristics: DoctorCharacteristicsEnum[];
   doctorCommunicationStyle: DoctorCommunicationStyleEnum;
   healthStatus: PacientHealthStatusEnum;
+  specificReason: string;
+  profession: string;
 }
 
 interface RegisterAppointmentDataDto {
