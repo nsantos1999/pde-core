@@ -11,6 +11,7 @@ export interface AnamneseDtoInterface {
   age: string;
   gender?: Gender;
   time_availability: TimeAvailability;
-
+  profession: string;
+  specificReason: string;
   metadata: PacientMetadata;
 }
