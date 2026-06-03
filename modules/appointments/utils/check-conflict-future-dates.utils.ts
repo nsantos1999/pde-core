@@ -7,7 +7,7 @@ interface DateToCompareWithRoundsItem {
 }
 
 export class CheckConflictFutureDatesUtils {
-  private static readonly ROUND_TO_COMPARE_DATES = 5;
+  private static readonly ROUND_TO_COMPARE_DATES = 10;
 
   static execute(
     dateToCompareA: DateToCompareWithRoundsItem,
